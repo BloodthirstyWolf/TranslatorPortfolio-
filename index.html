@@ -23,17 +23,19 @@
 paragraphs.forEach(paragraph => {
     paragraph.addEventListener('click', () => {
         const currentLang = paragraph.getAttribute('data-lang');
+        const otherLang = currentLang === 'ru' ? 'en' : 'ru';
         
-        // Меняем язык только для текущего параграфа
-        if (currentLang === 'ru') {
-            paragraph.setAttribute('data-lang', 'en');
-            paragraph.textContent = 'This is English text.';
-        } else if (currentLang === 'en') {
-            paragraph.setAttribute('data-lang', 'ru');
-            paragraph.textContent = 'Это русский текст.';
-        }
+        // Переключаем видимость только текущего языка
+        paragraphs.forEach(p => {
+            if (p.getAttribute('data-lang') === currentLang) {
+                p.style.display = 'none';
+            } else if (p.getAttribute('data-lang') === otherLang) {
+                p.style.display = 'block';
+            }
+        });
     });
 });
+
 
     </script>
 </body>
