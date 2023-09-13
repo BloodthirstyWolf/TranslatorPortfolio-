@@ -20,12 +20,21 @@
     <script>
         const paragraphs = document.querySelectorAll('p[data-lang]');
 
-        paragraphs.forEach(paragraph => {
-            paragraph.addEventListener('click', () => {
-                paragraphs.forEach(p => p.style.display = 'none');
-                paragraph.style.display = 'block';
-            });
-        });
+paragraphs.forEach(paragraph => {
+    paragraph.addEventListener('click', () => {
+        const currentLang = paragraph.getAttribute('data-lang');
+        
+        // Меняем язык только для текущего параграфа
+        if (currentLang === 'ru') {
+            paragraph.setAttribute('data-lang', 'en');
+            paragraph.textContent = 'This is English text.';
+        } else {
+            paragraph.setAttribute('data-lang', 'ru');
+            paragraph.textContent = 'Это русский текст.';
+        }
+    });
+});
+
     </script>
 </body>
 </html>
