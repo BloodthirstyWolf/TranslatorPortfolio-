@@ -17,6 +17,14 @@
                 russian: "Что такое Seal и Ghost Tan?",
                 english: "What are Seal and Ghost Tan?\nSeal and ghost tan commonly only happen on dogs with a KB/ky genotype. Normally this genotype would cause a solid dominant black phenotype in all pigmented areas.\nBut in seal or ghost tan coloration, a yet unknown allele or modifier causes a phenotype that is often described as incomplete dominant black, some kind of modified dominant black or simply “bad black“."
             },
+            {
+                russian: "Третий абзац на русском.",
+                english: "Third paragraph in English."
+            },
+            {
+                russian: "Четвертый абзац на русском.",
+                english: "Fourth paragraph in English."
+            }
             // Добавьте другие абзацы с параллельными переводами здесь
         ];
 
@@ -31,17 +39,18 @@
 
         function changeLanguage(element) {
             if (element.getAttribute("data-язык") === "русский") {
-                element.nextElementSibling.style.display = "block";
-                element.style.display = "none";
-                element.nextElementSibling.setAttribute("data-язык", "английский");
+                element.textContent = paragraphs[currentParagraph].english;
+                element.setAttribute("data-язык", "английский");
             } else {
-                element.previousElementSibling.style.display = "block";
-                element.style.display = "none";
-                element.previousElementSibling.setAttribute("data-язык", "русский");
-                currentParagraph++;
-                if (currentParagraph < paragraphs.length) {
-                    displayParagraph();
-                }
+                element.textContent = paragraphs[currentParagraph].russian;
+                element.setAttribute("data-язык", "русский");
+            }
+        }
+
+        function nextParagraph() {
+            currentParagraph++;
+            if (currentParagraph < paragraphs.length) {
+                displayParagraph();
             }
         }
 
@@ -51,6 +60,6 @@
     </script>
 </head>
 <body>
-    <div id="paragraph-container"></div>
+    <div id="paragraph-container" onclick="changeLanguage(this); nextParagraph();"></div>
 </body>
 </html>
