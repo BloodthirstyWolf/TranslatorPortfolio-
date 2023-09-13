@@ -28,7 +28,7 @@ paragraphs.forEach(paragraph => {
         if (currentLang === 'ru') {
             paragraph.setAttribute('data-lang', 'en');
             paragraph.textContent = 'This is English text.';
-        } else {
+        } else if (currentLang === 'en') {
             paragraph.setAttribute('data-lang', 'ru');
             paragraph.textContent = 'Это русский текст.';
         }
