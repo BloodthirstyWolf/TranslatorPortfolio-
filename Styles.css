@@ -20,23 +20,3 @@ body {
     width: 100%;
     margin: 20px;
 }
-
-/* Стили для абзацев */
-p {
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 4px;
-    margin: 0 0 10px 0; /* Добавляем небольшой отступ снизу каждого абзаца */
-    transition: background-color 0.3s;
-}
-
-/* Добавляем анимацию для плавной смены языка */
-[data-lang] {
-    transition: opacity 0.3s ease-in-out;
-    opacity: 1;
-}
-
-[data-lang="en"] {
-    opacity: 0;
-    pointer-events: none; /* Чтобы скрытые элементы не были интерактивными */
-}
