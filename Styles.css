@@ -26,3 +26,15 @@ img {
     max-width: 100%; /* Максимальная ширина изображения - ширина колонки */
     height: auto; /* Сохранить пропорции изображения */
 }
+
+.bilingual-list {
+  list-style-type: none;
+}
+
+.bilingual-list li::before {
+  content: "\2022"; /* Устанавливаем символ "•" в качестве маркера */
+  color: #93ACA7; /* Задаем цвет маркера */
+  display: inline-block;
+  width: 1em; /* Ширина маркера */
+  margin-left: -1em; /* Отрицательный margin сдвигает маркер влево */
+}
