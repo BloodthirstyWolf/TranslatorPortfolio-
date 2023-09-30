@@ -78,7 +78,12 @@
 
         <p data-lang="ru">Но.</p>
 <p data-lang="en" style="display:none;"> Here are just some examples for breeds where you can sometimes find seal:
-<ol>
+
+        
+        
+        
+        
+        <ol>
   <li>Pug</li>
   <li>Boxer</li>
   <li>Boston Terrier</li>
@@ -112,23 +117,25 @@ Since seal is somewhat rare and barely detectable in lighter coats there are man
     </div>
     
     <script>
-        const elements = document.querySelectorAll('[data-lang]');
+      const lists = document.querySelectorAll('.bilingual-list');
+const buttons = document.querySelectorAll('#language-toggle button');
 
-elements.forEach(element => {
-    element.addEventListener('click', () => {
-        const currentLang = element.getAttribute('data-lang');
-        const otherLang = currentLang === 'ru' ? 'en' : 'ru';
-        
-        // Переключаем видимость только текущего языка для всех элементов
-        elements.forEach(e => {
-            if (e.getAttribute('data-lang') === currentLang) {
-                e.style.display = 'none';
-            } else if (e.getAttribute('data-lang') === otherLang) {
-                e.style.display = 'block';
-            }
-        });
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    const selectedLang = button.getAttribute('data-lang');
+    
+    lists.forEach(list => {
+      const listLang = list.getAttribute('data-lang');
+      
+      if (listLang === selectedLang) {
+        list.style.display = 'block';
+      } else {
+        list.style.display = 'none';
+      }
     });
+  });
 });
+
     </script>
 </body>
 </html>
