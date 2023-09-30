@@ -136,20 +136,32 @@ Since seal is somewhat rare and barely detectable in lighter coats there are man
     </div>
     
     <script>
+function toggleLanguage(currentLang) {
+  const otherLang = currentLang === 'ru' ? 'en' : 'ru';
+  
+  elements.forEach(e => {
+    if (e.getAttribute('data-lang') === currentLang) {
+      e.style.display = 'none';
+    } else if (e.getAttribute('data-lang') === otherLang) {
+      e.style.display = 'block';
+    }
+  });
+}
+
+const elements = document.querySelectorAll('[data-lang]');
 const lists = document.querySelectorAll('.bilingual-list');
+
+elements.forEach(element => {
+  element.addEventListener('click', () => {
+    const currentLang = element.getAttribute('data-lang');
+    toggleLanguage(currentLang);
+  });
+});
 
 lists.forEach(list => {
   list.addEventListener('click', () => {
     const currentLang = list.getAttribute('data-lang');
-    const otherLang = currentLang === 'ru' ? 'en' : 'ru';
-    
-    lists.forEach(l => {
-      if (l.getAttribute('data-lang') === currentLang) {
-        l.style.display = 'none';
-      } else if (l.getAttribute('data-lang') === otherLang) {
-        l.style.display = 'block';
-      }
-    });
+    toggleLanguage(currentLang);
   });
 });
 
