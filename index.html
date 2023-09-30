@@ -136,24 +136,23 @@ Since seal is somewhat rare and barely detectable in lighter coats there are man
     </div>
     
     <script>
-      const lists = document.querySelectorAll('.bilingual-list');
-const buttons = document.querySelectorAll('#language-toggle button');
+const lists = document.querySelectorAll('.bilingual-list');
 
-buttons.forEach(button => {
-  button.addEventListener('click', () => {
-    const selectedLang = button.getAttribute('data-lang');
+lists.forEach(list => {
+  list.addEventListener('click', () => {
+    const currentLang = list.getAttribute('data-lang');
+    const otherLang = currentLang === 'ru' ? 'en' : 'ru';
     
-    lists.forEach(list => {
-      const listLang = list.getAttribute('data-lang');
-      
-      if (listLang === selectedLang) {
-        list.style.display = 'block';
-      } else {
-        list.style.display = 'none';
+    lists.forEach(l => {
+      if (l.getAttribute('data-lang') === currentLang) {
+        l.style.display = 'none';
+      } else if (l.getAttribute('data-lang') === otherLang) {
+        l.style.display = 'block';
       }
     });
   });
 });
+
 
     </script>
 </body>
