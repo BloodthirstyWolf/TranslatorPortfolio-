@@ -32,8 +32,13 @@ img {
   padding-left: 0; /* Убираем отступ слева у списка */
 }
 
+.bilingual-list {
+  list-style-type: none;
+  padding-left: 0; /* Убираем отступ слева у списка */
+}
+
 .bilingual-list li {
-  margin-bottom: 10px; /* Добавляем небольшой отступ снизу между элементами списка */
+  margin-bottom: 10px; /* Добавляем небольшой отступ между элементами списка */
 }
 
 .bilingual-list li::before {
@@ -41,6 +46,6 @@ img {
   color: #93ACA7; /* Задаем цвет маркера */
   display: inline-block;
   width: 1em; /* Ширина маркера */
-  font-size: 1em; /* Уменьшаем размер шрифта маркера */
   margin-right: 5px; /* Добавляем небольшой отступ между маркером и текстом */
+  font-size: 1em; /* Уменьшаем размер маркера до более подходящего значения */
 }
