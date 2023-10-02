@@ -36,5 +36,5 @@ img {
   color: #93ACA7; /* Задаем цвет маркера */
   display: inline-block;
   width: 1em; /* Ширина маркера */
-  font-size: 10em;
+  font-size: 5px;
 }
