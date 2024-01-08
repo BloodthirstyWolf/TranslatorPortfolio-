@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Result Generator</title>
+</head>
+<body>
+    <label for="result">Enter probabilities:</label>
+    <br>
+    <textarea id="probabilities" rows="4" cols="50" placeholder="1 - 29.2%&#10;2 - 62.3%&#10;3 - 0.5%&#10;4 - 8.1%"></textarea>
+    <br>
+    <button onclick="generateResult()">Generate Result</button>
+    <br>
+    <p id="result">Result will be displayed here</p>
+
+    <script>
+        function generateResult() {
+            const probabilitiesInput = document.getElementById('probabilities').value;
+            const probabilities = probabilitiesInput.split('\n').map(line => {
+                const [_, probability] = line.split('-').map(item => item.trim());
+                return parseFloat(probability.replace('%', ''));
+            });
+
+            const randomValue = Math.random() * 100;
+            let cumulativeProbability = 0;
+
+            for (let i = 0; i < probabilities.length; i++) {
+                cumulativeProbability += probabilities[i];
+                if (randomValue <= cumulativeProbability) {
+                    document.getElementById('result').innerText = `Result: ${i + 1}`;
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
