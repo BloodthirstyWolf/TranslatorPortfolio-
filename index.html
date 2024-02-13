@@ -8,10 +8,10 @@
         body {
             margin: 0;
             padding: 0;
-            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 100vh;
             background-color: #f0e5da; /* Пастельный цвет фона */
         }
         
@@ -24,17 +24,17 @@
         }
         
         input[type="text"] {
-            width: 100%;
+            width: calc(100% - 20px);
             padding: 10px;
             border: none;
             border-radius: 10px; /* Закругленные края */
             box-sizing: border-box;
+            margin: 10px 0;
         }
         
-        .buttons {
+        .header {
             display: flex;
             justify-content: space-between;
-            margin-top: 20px;
         }
         
         .button {
@@ -48,13 +48,14 @@
 </head>
 <body>
     <div class="container">
-        <input type="text" placeholder="Введите что-то...">
-        <div class="buttons">
-            <button class="button">Создать</button>
-            <button class="button">Открыть</button>
-            <button class="button">Сохранить</button>
-            <button class="button">Сохранить как</button>
+        <div class="header">
+            <button class="button">Кнопка 1</button>
+            <button class="button">Кнопка 2</button>
+            <button class="button">Кнопка 3</button>
+            <button class="button">Кнопка 4</button>
         </div>
+        <input type="text" placeholder="Введите что-то...">
     </div>
 </body>
 </html>
+
