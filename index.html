@@ -3,61 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pastel Design</title>
+    <title>Страница с дизайном</title>
     <style>
         body {
             margin: 0;
             padding: 0;
+            background-color: #f0e6f3; /* Пастельный цвет фона */
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0e5da; /* Пастельный цвет фона */
         }
-        
+
         .container {
-            width: 33%; /* Ширина белого поля для ввода */
+            width: 33%;
             padding: 20px;
             background-color: white;
-            border-radius: 20px; /* Закругленные края */
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Тень */
-            margin-top: 20px;
-            margin-bottom: 20px;
+            border-radius: 10px;
         }
-        
+
         input[type="text"] {
             width: 100%;
             padding: 10px;
-            border: none;
-            border-radius: 10px; /* Закругленные края */
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
             box-sizing: border-box;
-            margin: 10px 0;
         }
-        
-        .header {
+
+        .buttons {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 10px;
         }
-        
+
         .button {
-            padding: 10px 20px;
+            width: calc(25% - 10px);
+            padding: 10px;
             background-color: white;
+            border-radius: 10px;
             border: 1px solid #ccc;
-            border-radius: 10px; /* Закругленные края */
+            text-align: center;
             cursor: pointer;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <button class="button">Кнопка 1</button>
-            <button class="button">Кнопка 2</button>
-            <button class="button">Кнопка 3</button>
-            <button class="button">Кнопка 4</button>
+        <input type="text" placeholder="Введите что-то...">
+        <div class="buttons">
+            <div class="button">Кнопка 1</div>
+            <div class="button">Кнопка 2</div>
+            <div class="button">Кнопка 3</div>
+            <div class="button">Кнопка 4</div>
         </div>
     </div>
-    <input type="text" placeholder="Введите что-то...">
 </body>
 </html>
