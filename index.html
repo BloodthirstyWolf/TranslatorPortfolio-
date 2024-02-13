@@ -38,6 +38,11 @@
     border-radius: 20px; /* Закругленные края */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень поля ввода */
   }
+
+  /* Центрирование поля ввода */
+  #input-container {
+    text-align: center;
+  }
 </style>
 </head>
 <body>
@@ -49,7 +54,10 @@
   <button class="button">Кнопка 4</button>
 </div>
 
-<input type="text" id="input-field" placeholder="Введите что-нибудь">
+<!-- Обертка для центрирования поля ввода -->
+<div id="input-container">
+  <input type="text" id="input-field" placeholder="Введите что-нибудь">
+</div>
 
 </body>
 </html>
