@@ -6,15 +6,15 @@ body, html {
 
 header {
     text-align: right;
+    width: 100vw; /* Ширина хедера ровно равна ширине экрана */
     position: relative;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
+    margin: 0; /* Убираем отступы */
+    padding: 0; /* Убираем внутренние отступы */
 }
 
 header img {
     width: 100%;
-    height: auto;
+    height: auto; /* Автоматическая высота для сохранения соотношения сторон */
 }
 
 .buttons {
@@ -32,36 +32,32 @@ header img {
     margin-left: 10px;
 }
 
+.container1, .container2, footer {
+    width: 100vw; /* Ширина контейнеров и подвала ровно равна ширине экрана */
+    padding: 0; /* Убираем внутренние отступы */
+    margin: 0; /* Убираем отступы */
+}
+
 .container1 {
-    width: 100vw;
     background-image: url('background1.png');
     background-size: cover;
     background-position: center;
-    padding: 20px;
-}
-
-.description {
-    color: #FFFEF8;
 }
 
 .container2 {
-    width: 100vw;
     background-color: #FFFEF8;
-    padding: 20px;
-}
-
-.title {
-    text-align: center;
 }
 
 .instructions {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 20px;
 }
 
 .step {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .circle {
@@ -69,6 +65,7 @@ header img {
     height: 10vw;
     background-color: #003320;
     border-radius: 50%;
+    display: inline-block;
 }
 
 .step p {
@@ -79,9 +76,6 @@ footer {
     background-color: #FFFEF8;
     padding: 20px;
     text-align: center;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
 }
 
 hr {
