@@ -1,63 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Пастельная страница</title>
-<style>
-  body {
-    background-color: #f0e6f6; /* Пастельный фон */
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
-
-  #header {
-    background-color: #ffffff; /* Белый цвет хедера */
-    padding: 20px;
-    text-align: center;
-  }
-
-  .button {
-    background-color: #ffffff; /* Белые кнопки */
-    color: #000000; /* Черный цвет текста на кнопках */
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 20px; /* Закругленные края */
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень кнопок */
-  }
-
-  #input-field {
-    width: 50%; /* 50% ширины страницы */
-    height: auto; /* Автоматическое изменение высоты */
-    margin: 20px auto; /* Позиционирование по центру */
-    padding: 10px;
-    border: none;
-    border-radius: 20px; /* Закругленные края */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень поля ввода */
-  }
-
-  /* Центрирование поля ввода */
-  #input-container {
-    text-align: center;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<div id="header">
-  <button class="button">Кнопка 1</button>
-  <button class="button">Кнопка 2</button>
-  <button class="button">Кнопка 3</button>
-  <button class="button">Кнопка 4</button>
-</div>
-
-<!-- Обертка для центрирования поля ввода -->
-<div id="input-container">
-  <input type="text" id="input-field" placeholder="Введите что-нибудь">
-</div>
-
+    <header>
+        <img src="header_image.png" alt="Header Image">
+        <div class="buttons">
+            <a href="#" class="button">Вход</a>
+            <a href="#" class="button">Регистрация</a>
+        </div>
+    </header>
+    <div class="container1">
+        <p class="description">Описание сайта</p>
+    </div>
+    <div class="container2">
+        <h2 class="title">Как пользоваться?</h2>
+        <div class="instructions">
+            <div class="step">
+                <div class="circle"></div>
+                <p>Текст иллюстрации 1</p>
+            </div>
+            <div class="step">
+                <div class="circle"></div>
+                <p>Текст иллюстрации 2</p>
+            </div>
+            <div class="step">
+                <div class="circle"></div>
+                <p>Текст иллюстрации 3</p>
+            </div>
+            <div class="step">
+                <div class="circle"></div>
+                <p>Текст иллюстрации 4</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <hr>
+        <nav>
+            <a href="#">Техподдержка</a>
+            <a href="#">Купить подписку</a>
+            <a href="#">FAQ</a>
+        </nav>
+    </footer>
 </body>
 </html>
