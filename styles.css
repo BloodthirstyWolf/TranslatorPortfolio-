@@ -5,12 +5,11 @@ body, html {
 }
 
 header {
-    position: relative;
     text-align: right;
 }
 
 header img {
-    width: 100%;
+    width: 100vw;
     height: auto;
 }
 
@@ -33,7 +32,9 @@ header img {
     width: 100vw;
     background-image: url('background1.png');
     background-size: cover;
+    background-position: center;
     padding: 20px;
+    margin-top: -20px; /* Убираем отступ между контейнером и хедером */
 }
 
 .description {
@@ -90,4 +91,3 @@ footer nav a {
     text-decoration: none;
     margin: 0 10px;
 }
-
