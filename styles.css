@@ -33,7 +33,6 @@ header img {
     background-image: url('background1.png');
     background-size: cover;
     background-position: center;
-    padding: 20px;
     margin-top: -20px; /* Убираем отступ между контейнером и хедером */
 }
 
