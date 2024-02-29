@@ -4,6 +4,6 @@ window.onload = function() {
     var headerHeight = document.querySelector('header').offsetHeight;
 
     // Устанавливаем высоту контейнера с учетом высоты хедера
-    var container = document.querySelector('.container');
+    var container = document.querySelector('.container1');
     container.style.height = 'calc(100vh - ' + headerHeight + 'px)';
 }
