@@ -10,14 +10,18 @@
             padding: 0;
             font-family: Arial, sans-serif;
             height: 100%;
+            background-color: #003320;
         }
 
         header {
             width: 100%;
-            background-image: url(header_image.png);
-            background-size: cover;
             height: auto;
             overflow: hidden;
+        }
+
+        .header-image {
+            width: 100%;
+            display: block;
         }
 
         .top-right-buttons {
@@ -32,28 +36,30 @@
             border-radius: 10px;
             padding: 5px 10px;
             margin-left: 10px;
-            color: #003320;
+            color: #FFFEF8;
             font-size: 16px;
         }
 
         .container {
             width: 100%;
+            height: calc(100vh - 50px); /* Вычитаем высоту header'а */
             background-image: url(background1.png);
             background-size: cover;
-            height: 100vh;
+            background-position: center;
             display: flex;
             align-items: center;
         }
 
         .content {
             width: 50%;
-            margin-left: 10%;
-            color: #003320;
+            margin-left: 5%;
+            color: #FFFEF8;
         }
     </style>
 </head>
 <body>
     <header>
+        <img src="header_image.png" alt="Header Image" class="header-image">
         <div class="top-right-buttons">
             <button>Вход</button>
             <button>Регистрация</button>
