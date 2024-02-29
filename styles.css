@@ -44,7 +44,7 @@ header img {
     background-image: url('background1.png');
     background-size: cover;
     background-position: center;
-    height: 100%; /* Устанавливаем высоту контейнера равной 100% */
+    height: 100vh; /* Устанавливаем высоту контейнера равной высоте окна браузера */
 }
 
 
