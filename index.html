@@ -7,60 +7,58 @@
     <style>
         body {
             margin: 0;
-            padding: 0;
             font-family: Arial, sans-serif;
         }
+
         header {
+            position: relative;
             width: 100%;
-            background-image: url('header_image.png');
-            background-size: cover;
-            background-position: center;
+        }
+
+        header img {
+            width: 100%;
             height: auto;
-            padding: 20px;
         }
-        .top-right-buttons {
+
+        .buttons {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 10px;
+            right: 10px;
         }
-        .button {
+
+        .green-button {
             background-color: #003320;
             color: #FFFEF8;
-            padding: 10px 20px;
             border: none;
             border-radius: 10px;
+            padding: 8px 16px;
             margin-left: 10px;
             cursor: pointer;
         }
+
         .container {
             width: 100vw;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            height: auto;
             background-image: url('background1.png');
             background-size: cover;
-            padding: 20px;
         }
-        .description {
+
+        .site-description {
+            margin: 20px 10vw;
             color: #FFFEF8;
-            margin-left: 10vw;
-            max-width: 80%;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="top-right-buttons">
-            <button class="button">Вход</button>
-            <button class="button">Регистрация</button>
+        <img src="header_image.png" alt="Header Image">
+        <div class="buttons">
+            <button class="green-button">Вход</button>
+            <button class="green-button">Регистрация</button>
         </div>
     </header>
     <div class="container">
-        <div class="description">
-    <h1>Описание сайта</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut velit eu ligula convallis aliquam. Cras nec lorem eget purus ultricies interdum. Mauris efficitur leo sed risus ultrices, sed volutpat purus fermentum. Integer sit amet nunc id enim consequat sagittis at et sem. Nulla consectetur fermentum eros, eget pharetra nisi consequat at. Duis euismod dolor eget dolor tincidunt, quis scelerisque est consequat. Donec et sollicitudin sapien. Vivamus ultricies convallis quam, vel auctor enim gravida nec. Integer in vehicula felis, sed placerat ipsum. Nunc tempus lectus vel arcu vehicula convallis.</p>
-</div>
-
+        <p class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
 </body>
 </html>
