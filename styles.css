@@ -49,7 +49,7 @@ header img {
 .container2 {
     background-color: #FFFEF8;
     height: auto; /* Автоматическая высота */
-    background-size: cover; /* Изображение фона заполняет весь контейнер */
+    background-size: contain; /* Изображение фона заполняет весь контейнер */
     text-align: center; /* Выравнивание текста по центру */
 }
 
