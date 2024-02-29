@@ -11,12 +11,12 @@ header {
     position: relative;
     margin: 0;
     padding: 0;
-    height: auto;
+    height: 100vh;
 }
 
 header img {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .buttons {
@@ -42,17 +42,12 @@ header img {
 
 .container1 {
     background-image: url('background1.png');
-    background-size: contain; /* Изображение будет сжиматься и подстраиваться под размеры контейнера */
-    background-repeat: no-repeat; /* Запрет повторения изображения */
-    background-position: center; /* Центрируем изображение */
-    height: 100vh; /* Устанавливаем высоту контейнера равной высоте окна браузера */
+    background-size: cover;
+    background-position: center;
 }
-
-
 
 .container2 {
     background-color: #FFFEF8;
-    height: auto;
     background-size: cover;
     text-align: center;
 }
