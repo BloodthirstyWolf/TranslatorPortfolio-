@@ -4,53 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Регистрация</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            width: 100%;
+            background-image: url('header_image.png');
+            background-size: cover;
+            background-position: center;
+            height: auto;
+            padding: 20px;
+        }
+        .top-right-buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .button {
+            background-color: #003320;
+            color: #FFFEF8;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .container {
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-image: url('background1.png');
+            background-size: cover;
+            padding: 20px;
+        }
+        .description {
+            color: #FFFEF8;
+            margin-left: 10vw;
+            max-width: 80%;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="buttons">
-            <a href="#" class="button">Вход</a>
-            <a href="#" class="button">Регистрация</a>
+        <div class="top-right-buttons">
+            <button class="button">Вход</button>
+            <button class="button">Регистрация</button>
         </div>
-        <img src="header_image.png" alt="Header Image">
     </header>
+    <div class="container">
+        <div class="description">
+    <h1>Описание сайта</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut velit eu ligula convallis aliquam. Cras nec lorem eget purus ultricies interdum. Mauris efficitur leo sed risus ultrices, sed volutpat purus fermentum. Integer sit amet nunc id enim consequat sagittis at et sem. Nulla consectetur fermentum eros, eget pharetra nisi consequat at. Duis euismod dolor eget dolor tincidunt, quis scelerisque est consequat. Donec et sollicitudin sapien. Vivamus ultricies convallis quam, vel auctor enim gravida nec. Integer in vehicula felis, sed placerat ipsum. Nunc tempus lectus vel arcu vehicula convallis.</p>
+</div>
 
-    <div class="container1">
-        <div class="left-content">
-            <p>Описание сайта</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
     </div>
-
-    <div class="container2">
-        <h1>Как пользоваться?</h1>
-        <div class="instructions">
-            <div class="step">
-                <div class="circle"></div>
-                <p>Текст инструкции 1</p>
-            </div>
-            <div class="step">
-                <div class="circle"></div>
-                <p>Текст инструкции 2</p>
-            </div>
-            <div class="step">
-                <div class="circle"></div>
-                <p>Текст инструкции 3</p>
-            </div>
-            <div class="step">
-                <div class="circle"></div>
-                <p>Текст инструкции 4</p>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <hr>
-        <nav>
-            <a href="#">Техподдержка</a>
-            <a href="#">Купить подписку</a>
-            <a href="#">FAQ</a>
-        </nav>
-    </footer>
 </body>
 </html>
