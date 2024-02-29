@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Header with Buttons</title>
+<title>My Website</title>
 <style>
     body, html {
         margin: 0;
@@ -12,43 +12,34 @@
     }
     .header {
         background-image: url('header_image.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
+        background-size: cover;
+        height: 100vh;
         width: 100vw;
-        height: auto;
-        overflow: hidden;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 20px; /* Adjust padding as needed */
-    }
-    .button {
-        background-color: #003320;
-        color: #FFFEF8;
-        padding: 10px 20px;
-        border-radius: 20px;
-        text-decoration: none;
-        margin-left: 10px;
     }
     .container1 {
         background-image: url('background1.png');
-        background-size: cover;
-        width: 100vw;
-        height: 100vh;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
         display: flex;
-        justify-content: center;
-        align-items: center;
+    }
+    .description {
+        width: 50%;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: justify;
     }
 </style>
 </head>
 <body>
-    <div class="header">
-        <a href="#" class="button">Регистрация</a>
-        <a href="#" class="button">Вход</a>
+<div class="header"></div>
+<div class="container1">
+    <div class="description">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
     </div>
-    <div class="container1">
-        <!-- Content for container1 goes here -->
-    </div>
+</div>
 </body>
 </html>
