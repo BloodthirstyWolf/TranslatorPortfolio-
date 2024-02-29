@@ -35,6 +35,13 @@ header {
     font-size: 16px;
 }
 
+.container1, .container2 {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
 .container1 {
             height: 100vh;
             width: 100vw;
@@ -43,6 +50,12 @@ header {
             background-position: center;
 }
 
+.container2 {
+    background-color: #FFFEF8;
+    text-align: center;
+    padding: 20px 0;
+    z-index: -1;
+}
 .text-overlay {
     position: absolute;
     top: 0;
@@ -59,15 +72,6 @@ header {
     width: 50%;
     color: #FFFEF8;
     text-align: center;
-}
-
-.container2 {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    background-color: #FFFEF8;
-    text-align: center;
-    padding: 20px 0;
 }
 
 .instructions {
