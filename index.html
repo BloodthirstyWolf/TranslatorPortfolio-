@@ -42,14 +42,15 @@
         }
 
         .container {
-            width: 100vw;
-            height: calc(100vh - 50px); /* Вычитаем высоту header'а */
-            background-image: url(background1.png);
+            width: 100%; /* Ширина контейнеров и подвала равна ширине экрана */
+            padding: 0; /* Убираем внутренние отступы */
+            margin: 0; /* Убираем отступы */
+            background-image: url('background1.png');
             background-size: cover;
             background-position: center;
+            margin-top: 0; /* Убираем отступ сверху */
             display: flex;
             align-items: center;
-            justify-content: center;
         }
 
         .content {
