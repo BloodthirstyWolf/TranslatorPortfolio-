@@ -44,8 +44,9 @@ header img {
     background-image: url('background1.png');
     background-size: cover;
     background-position: center;
-    margin-top: 0;
+    height: 100%; /* Устанавливаем высоту контейнера равной 100% */
 }
+
 
 .container2 {
     background-color: #FFFEF8;
