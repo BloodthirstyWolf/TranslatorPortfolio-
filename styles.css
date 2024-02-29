@@ -75,6 +75,8 @@ header img {
 
 .step p {
     margin-top: 10px;
+    position: relative;
+    z-index: 1; /* Поднимаем числа над кружками */
 }
 
 footer {
