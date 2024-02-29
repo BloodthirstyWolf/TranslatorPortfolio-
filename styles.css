@@ -35,16 +35,12 @@ header {
     font-size: 16px;
 }
 
-.container {
-    width: 100%;
-    padding: 0;
-    margin: 0;
+.container1 {
     background-image: url('background1.png');
     background-size: cover;
     background-position: center;
-    margin-top: 0;
-    display: flex;
-    align-items: center;
+    height: auto; /* Автоматическая высота для сохранения соотношения сторон изображения */
+    margin-top: 0; /* Убираем отступ сверху */
 }
 
 .content {
