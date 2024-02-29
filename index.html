@@ -1,79 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #FFFEF8;
-        }
-        
-        header {
-            width: 100%;
-            background-image: url('header_image.png');
-            background-size: cover;
-            height: auto;
-        }
-        
-        .top-right-buttons {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-        
-        .top-right-buttons button {
-            background-color: #003320;
-            color: #FFFEF8;
-            border: none;
-            border-radius: 10px;
-            padding: 5px 10px;
-            margin-left: 10px;
-        }
-        
-        .container {
-            width: 100vw;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .description {
-            flex: 1;
-            padding: 0 10vw;
-        }
-        
-        .background-image {
-            background-image: url('background1.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .description p {
-            color: #003320;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Регистрация</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    header {
+        width: 100%;
+        background-image: url('header_image.png');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    .header-buttons {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .header-buttons button {
+        background-color: #003320;
+        color: #FFFEF8;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    .container {
+        width: 100vw;
+        height: auto;
+        background-image: url('background1.png');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .content {
+        max-width: 50%;
+        padding: 0 20px;
+        text-align: left;
+    }
+    .content h2 {
+        color: #003320;
+    }
+</style>
 </head>
 <body>
     <header>
-        <div class="top-right-buttons">
+        <div class="header-buttons">
             <button>Вход</button>
             <button>Регистрация</button>
         </div>
     </header>
-    <div class="background-image">
-        <div class="container">
-            <div class="description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod mattis magna eget fermentum. Duis euismod mattis magna eget fermentum.</p>
-            </div>
+    <div class="container">
+        <div class="content">
+            <h2>Описание сайта</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut odio at turpis volutpat pellentesque. Nullam eget augue nec orci consequat dictum. Cras tempor est nec nulla mattis, ac tincidunt libero placerat. Proin sagittis sodales mi, id facilisis neque ultricies in. Fusce vitae arcu ut sapien gravida varius nec sed tortor. Phasellus viverra lectus eu convallis tincidunt. Vivamus commodo lorem et purus molestie, vitae molestie est fringilla. Curabitur fermentum ultricies sapien, ac tempor sem dignissim nec.
+            </p>
         </div>
     </div>
 </body>
