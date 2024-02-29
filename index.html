@@ -1,52 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Страница с хедером и контейнером</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  .header {
+    background-image: url('header_image.png');
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+  }
+  .container1 {
+    background-image: url('background1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+  }
+</style>
 </head>
 <body>
-    <header>
-        <img src="header_image.png" alt="Header Image">
-        <div class="buttons">
-            <a href="#" class="button">Вход</a>
-            <a href="#" class="button">Регистрация</a>
-        </div>
-    </header>
-    <div class="container1">
-        <p class="description">Описание сайта</p>
-    </div>
-    <div class="container2">
-        <h2 class="title">Как пользоваться?</h2>
-        <div class="instructions">
-            <div class="step">
-                <div class="circle"></div>
-                <p>Создайте новую страницу
-                Для этого нажмите на аватарку и выберите пункт "Создать страницу" или перецдите в профиль и нажмите на "кнопку добавить новую" под спискком страниц</p>
-            </div>
-            <div class="step">
-                <div class="circle"></div>
-                <p>Добавьте абзацы
-                Каждый абзац необходимо добавлять отдельно. Для этого снизу есть кнопка "Добавить абзац". Будьте очень внимательны и не перепутайте русский и иностранный текст. </p>
-            </div>
-            <div class="step">
-                <div class="circle"></div>
-                <p>Сохраните текст и перецдите на страницу проссотра. Вы можете переключаться между редактиованием и просмотром, но не забывайте о сохранении текста для внесения изменений.</p>
-            </div>
-            <div class="step">
-                <div class="circle"></div>
-                <p>При желании вы можете добавлять других пользователей для совместного проссотра или редактирования. Для этого нажмите на плюс в спике "Кому доступно" и введите ник или номер пользователя и ыыбкрите степень его полномочий.</p>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <hr>
-        <nav>
-            <a href="#">Техподдержка</a>
-            <a href="#">Купить подписку</a>
-            <a href="#">FAQ</a>
-        </nav>
-    </footer>
+  <div class="header"></div>
+  <div class="container1"></div>
 </body>
 </html>
