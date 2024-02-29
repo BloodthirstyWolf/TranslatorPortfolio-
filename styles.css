@@ -39,9 +39,11 @@ header {
     background-image: url('background1.png');
     background-size: cover;
     background-position: center;
-    height: auto; /* Автоматическая высота для сохранения соотношения сторон изображения */
-    margin-top: 0; /* Убираем отступ сверху */
+    height: auto;
+    margin-top: 0;
+    border: none; /* Добавляем это свойство, чтобы убрать рамку */
 }
+
 
 .content {
     width: 50%;
