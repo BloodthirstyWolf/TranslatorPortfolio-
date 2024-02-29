@@ -43,14 +43,14 @@ header {
 }
 
 .container1 {
-            height: 100vh;
-            width: 100vw;
-            background-image: url('background1.png');
-            background-size: cover;
-            background-position: center;
+    width: 100vw; /* Ширина контейнера ровно равна ширине экрана */
+    height: 100vh; /* Высота контейнера ровно равна высоте экрана */
+    background-image: url('background1.png'); /* Фоновое изображение */
+    background-size: cover; /* Растягиваем изображение на всю площадь контейнера */
 }
 
 .container2 {
+    display: none; /* Временно скрываем второй контейнер */
     background-color: #FFFEF8;
     text-align: center;
     padding: 20px 0;
