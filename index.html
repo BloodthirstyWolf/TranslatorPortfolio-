@@ -6,33 +6,34 @@
 <title>Two Containers</title>
 <style>
   body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-  #container1 {
-    background: url('background1.png') no-repeat center center/cover;
-    height: 100vh;
-    position: relative;
-  }
-  #container2 {
-    background-color: #FFFEF8;
-    height: 50vh;
-    width: 100%;
-    position: relative;
-    top: calc(100vh - 50vh);
-  }
-  #container1 .text-overlay {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50%;
-    padding: 20px;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    color: white;
-  }
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+#container1 {
+  background: url('background.jpg') no-repeat center center;
+  background-size: contain;
+  height: 100vh;
+  position: relative;
+}
+#container2 {
+  background-color: #FFFEF8;
+  height: 50vh;
+  width: 100%;
+  position: relative;
+  top: calc(100vh - 50vh);
+}
+#container1 .text-overlay {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color: white;
+}
 </style>
 </head>
 <body>
