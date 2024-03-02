@@ -1,130 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Registration</title>
-<style>
-  body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-#container1 {
-  background: url('background1.png') no-repeat center center;
-  background-size: contain;
-  height: 100vh;
-  position: relative;
-}
-#container2 {
-  background-color: #FFFEF8;
-  height: 50vh;
-  width: 100%;
-  position: relative;
-  top: calc(100vh - 50vh);
-}
-#container1 .text-overlay {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50%;
-  padding: 20px;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-  color: white;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Header</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
 
-#container2 {
-  position: relative;
-}
+    .header {
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: flex-end;
+    }
 
-.line {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 2px;
-  height: 80%;
-  background-color: black;
-}
+    .profile-dropdown {
+      position: absolute;
+      top: 40px;
+      right: 10px;
+      background-color: #fff;
+      border: 1px solid #000;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      display: none;
+    }
 
-.step {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
+    .profile-dropdown.active {
+      display: block;
+    }
 
-.illustration {
-  width: 50px;
-  height: 50px;
-  background-color: #003320;
-  border-radius: 50%;
-}
+    .avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
 
-.description {
-  flex: 1;
-  padding: 0 20px;
-}
+    .profile-dropdown a {
+      display: block;
+      color: #000;
+      text-decoration: none;
+      padding: 5px 0;
+    }
 
-.number {
-  display: block;
-  width: 30px;
-  height: 30px;
-  background-color: #003320;
-  color: white;
-  font-size: 20px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 30px;
-}
-
-.elements-container {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
-
-.half-container {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.half-container img {
-  width: 50%;
-  height: auto;
-}
-
-.half-container p {
-  width: 50%;
-  padding: 0 20px;
-}
-</style>
+    .profile-dropdown a:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
 </head>
 <body>
-
-<div id="container1">
-  <div class="text-overlay">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  </div>
-</div>
-
-<div id="container2">
-  <div class="divider"></div>
-  <div class="elements-container">
-    <div class="half-container">
-      <img src="https://w.forfun.com/fetch/3d/3d3ca9ed70a61ea5b3b13956cc8fa1b7.jpeg" alt="Left Image">
-      <p>Left Text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="half-container">
-      <img src="https://w.forfun.com/fetch/3d/3d3ca9ed70a61ea5b3b13956cc8fa1b7.jpeg" alt="Right Image">
-      <p>Right Text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <div class="header">
+    <button onclick="toggleProfileDropdown()">Профиль</button>
+    <div class="profile-dropdown" id="profileDropdown">
+      <img src="avatar.jpg" alt="Avatar" class="avatar">
+      <a href="#">Личный кабинет</a>
+      <a href="#">Новая страница</a>
+      <a href="#">Настройки</a>
+      <a href="#">Выход</a>
     </div>
   </div>
-</div>
 
+  <script>
+    function toggleProfileDropdown() {
+      var dropdown = document.getElementById('profileDropdown');
+      dropdown.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
