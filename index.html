@@ -58,6 +58,10 @@
     .profile-dropdown a:hover {
       background-color: #f0f0f0;
     }
+
+  .Username {
+    text-align: center;
+    font-weight: bold;
   </style>
 </head>
 <body>
@@ -65,7 +69,9 @@
     <button onclick="toggleProfileDropdown()">Профиль</button>
     <div class="profile-dropdown" id="profileDropdown">
       <img src="avatar.jpg" alt="Avatar" class="avatar">
-      <p>User 1234</p>
+      <div class="center-me">
+  <p>User 1<p>
+      </div>
       <a href="#">Личный кабинет</a>
       <a href="#">Новая страница</a>
       <a href="#">Настройки</a>
