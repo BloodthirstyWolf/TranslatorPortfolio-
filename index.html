@@ -67,17 +67,6 @@
             transform: translateY(-50%);
         }
 
-        .divider {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 4px; /* Увеличена ширина полосы */
-            background-color: #003320; /* Изменен цвет полосы */
-            content: "";
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
         .container3 {
             display: flex;
             flex-direction: column;
@@ -87,7 +76,6 @@
             margin-top: 20px; /* Добавлен отступ сверху */
             text-align: center; /* Выравнивание по центру */
             color: #003320; /* Цвет текста */
-            margin-bottom: 30%; /* Добавлен отступ снизу */
         }
 
         .column {
@@ -120,13 +108,13 @@
         }
 
         @media only screen and (max-width: 480px) {
-        .container3 {
-            display: flex;
-            width: 100%;
-            height: 300vh;
-            background-color: #FFFEF8; /* Изменен цвет фона контейнера */
-            position: relative;
-        }
+            .container3 {
+                display: flex;
+                width: 100%;
+                height: 300vh;
+                background-color: #FFFEF8; /* Изменен цвет фона контейнера */
+                position: relative;
+            }
         }
     </style>
 </head>
@@ -145,8 +133,6 @@
     </div>
     <div class="container3">
         <h2>Как использовать?</h2>
-        <!-- Пространство в 30% высоты экрана под надписью -->
-        <div style="margin-bottom: 30vh;"></div> 
         <div class="column">
             <div class="item">
                 <img src="Point1.png" alt="Point1">
@@ -166,3 +152,7 @@
             <div class="item">
                 <img src="Point4.png" alt="Point4">
             </div>
+        </div>
+    </div>
+</body>
+</html>
