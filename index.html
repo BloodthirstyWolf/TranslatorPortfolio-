@@ -11,13 +11,6 @@
         height: 100%;
     }
 
-    header {
-        background-color: #333;
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-    }
-
     #header-container {
         position: relative;
         width: 100%;
@@ -34,7 +27,7 @@
     .buttons {
         position: absolute;
         top: 20px;
-        right: 20px;
+        left: 20px;
     }
 
     .button {
@@ -55,46 +48,44 @@
     }
 
     .container {
-        display: flex;
-        flex-wrap: wrap;
+        float: left;
+        width: 100%;
     }
 
-    .container > div {
-        box-sizing: border-box;
-        flex: 1 1 50%;
-        padding: 20px;
+    .container-1 {
+        height: 100vh; /* Высота первого контейнера равна высоте экрана */
+        background-image: url('background1.png'); /* Изображение на фоне первого контейнера */
+        background-size: cover; /* Растягиваем изображение на весь контейнер */
+        background-position: center; /* Выравнивание изображения по центру */
     }
 
-    .container .first-container {
-        background-color: #f2f2f2;
-        height: 100vh;
-    }
-
-    .container .second-container {
-        background-color: #ccc;
-        height: 150vh;
+    .container-2 {
+        height: 150vh; /* Высота второго контейнера 150% высоты экрана */
+        background-color: #ddd; /* Цвет второго контейнера */
     }
 </style>
 </head>
 <body>
-    <header>
-        <div id="header-container">
-            <img id="header-image" src="header_image.png" alt="Header Image">
-            <div class="buttons">
-                <button class="button" onclick="showNotification('Вход')">Вход</button>
-                <button class="button" onclick="showNotification('Регистрация')">Регистрация</button>
-                <button class="button" onclick="showNotification('Создать страницу')">Создать страницу</button>
-                <button class="button" onclick="showNotification('FAQ')">FAQ</button>
-            </div>
-        </div>
-    </header>
-    <div class="container">
-        <div class="first-container">
-            <h2>Первый контейнер</h2>
-        </div>
-        <div class="second-container">
-            <h2>Второй контейнер</h2>
-        </div>
+
+<div id="header-container">
+    <img id="header-image" src="header_image.png" alt="Header Image">
+    <div class="buttons">
+        <button class="button" onclick="showNotification('Вход')">Вход</button>
+        <button class="button" onclick="showNotification('Регистрация')">Регистрация</button>
+        <button class="button" onclick="showNotification('Создать страницу')">Создать страницу</button>
+        <button class="button" onclick="showNotification('FAQ')">FAQ</button>
     </div>
+</div>
+
+<div class="container container-1">
+    <h2>Первый контейнер</h2>
+    <!-- Содержимое первого контейнера -->
+</div>
+
+<div class="container container-2">
+    <h2>Второй контейнер</h2>
+    <!-- Содержимое второго контейнера -->
+</div>
+
 </body>
 </html>
