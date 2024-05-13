@@ -13,12 +13,14 @@
 
     header {
         background-image: url('header_image.png');
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
         background-position: center;
         color: #fff;
         text-align: center;
         padding: 20px;
         height: auto; /* Устанавливаем автоматическую высоту для хедера */
+        width: auto; /* Устанавливаем автоматическую ширину для хедера */
     }
 
     .container {
@@ -60,7 +62,7 @@
             var header = document.getElementById('mainHeader');
             var img = new Image();
             img.onload = function() {
-                header.style.height = this.height + 'px';
+                header.style.width = this.width + 'px';
             };
             img.src = 'header_image.png';
         };
