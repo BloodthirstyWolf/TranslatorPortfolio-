@@ -12,14 +12,46 @@
     }
 
     header {
-        background-image: url('header_image.png');
-        background-size: cover;
-        background-position: center;
+        background-color: #333;
         color: #fff;
-        text-align: center;
         padding: 20px;
-        height: auto; /* Устанавливаем автоматическую высоту для хедера */
-        width: auto; /* Устанавливаем автоматическую ширину для хедера */
+        text-align: center;
+    }
+
+    #header-container {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        color: white;
+        z-index: 2;
+    }
+
+    #header-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .buttons {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .button {
+        background-color: #fffef8;
+        color: #003320;
+        padding: 10px 20px;
+        border-radius: 20px;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        border: none;
+        outline: none;
+    }
+
+    .button:hover {
+        background-color: #003320;
+        color: white;
     }
 
     .container {
@@ -45,8 +77,16 @@
 </style>
 </head>
 <body>
-    <header id="mainHeader">
-        <h1>Заголовок</h1>
+    <header>
+        <div id="header-container">
+            <img id="header-image" src="header_image.png" alt="Header Image">
+            <div class="buttons">
+                <button class="button" onclick="showNotification('Вход')">Вход</button>
+                <button class="button" onclick="showNotification('Регистрация')">Регистрация</button>
+                <button class="button" onclick="showNotification('Создать страницу')">Создать страницу</button>
+                <button class="button" onclick="showNotification('FAQ')">FAQ</button>
+            </div>
+        </div>
     </header>
     <div class="container">
         <div class="first-container">
@@ -56,16 +96,5 @@
             <h2>Второй контейнер</h2>
         </div>
     </div>
-    <script>
-        window.onload = function() {
-            var header = document.getElementById('mainHeader');
-            var img = new Image();
-            img.onload = function() {
-                header.style.height = this.height + 'px';
-                header.style.width = this.width + 'px';
-            };
-            img.src = 'header_image.png';
-        };
-    </script>
 </body>
 </html>
