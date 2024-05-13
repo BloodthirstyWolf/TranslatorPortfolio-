@@ -13,8 +13,7 @@
 
     header {
         background-image: url('header_image.png');
-        background-size: contain;
-        background-repeat: no-repeat;
+        background-size: cover;
         background-position: center;
         color: #fff;
         text-align: center;
@@ -62,6 +61,7 @@
             var header = document.getElementById('mainHeader');
             var img = new Image();
             img.onload = function() {
+                header.style.height = this.height + 'px';
                 header.style.width = this.width + 'px';
             };
             img.src = 'header_image.png';
