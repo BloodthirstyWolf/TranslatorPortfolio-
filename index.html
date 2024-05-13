@@ -44,7 +44,7 @@
 </style>
 </head>
 <body>
-    <header>
+    <header id="mainHeader">
         <h1>Заголовок</h1>
     </header>
     <div class="container">
@@ -55,5 +55,15 @@
             <h2>Второй контейнер</h2>
         </div>
     </div>
+    <script>
+        window.onload = function() {
+            var header = document.getElementById('mainHeader');
+            var img = new Image();
+            img.onload = function() {
+                header.style.height = this.height + 'px';
+            };
+            img.src = 'header_image.png';
+        };
+    </script>
 </body>
 </html>
